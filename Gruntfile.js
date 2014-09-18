@@ -37,7 +37,7 @@ module.exports = function (grunt) {
       },
       pages: {
         options: {
-          remote: 'https://github.com/redpandatronicsuk/FlowerSlider.git',
+          remote: 'https://github.com/redpandatronicsuk/SvgSymbolFlags.git',
           branch: 'gh-pages'
         }
       }
