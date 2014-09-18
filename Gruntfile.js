@@ -27,6 +27,22 @@ module.exports = function (grunt) {
     // Project settings
     yeoman: appConfig,
 
+     //BuidControl:
+    buildcontrol: {
+      options: {
+        dir: 'dist',
+        commit: true,
+        push: true,
+        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+      },
+      pages: {
+        options: {
+          remote: 'https://github.com/redpandatronicsuk/FlowerSlider.git',
+          branch: 'gh-pages'
+        }
+      }
+    },
+
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       bower: {
@@ -431,6 +447,12 @@ module.exports = function (grunt) {
     'filerev',
     'usemin',
     'htmlmin'
+  ]);
+
+  grunt.registerTask('deploy', [
+  'test',
+  'build',
+  'buildcontrol'
   ]);
 
   grunt.registerTask('default', [
