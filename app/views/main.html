@@ -1,23 +1,72 @@
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
+<div class="hovery">
+  <h1 style="font-size: 250%;">SvgSymbolFlags</h1>
+  <hr/>
+  <p class="innnerHovery">
+    <img src="images/logoSquare_150.png" alt="RedPandaTronics" style="border-radius: 50%;"><br>
+    Compact inline SVG symbols of flags to use in single page html5 apps!
   </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
 </div>
 
 <div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
 
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
+  <div class="hovery">
+    <h1>Select Flags:</h1>
+    <hr/>
+    <div class="flag-grid">
+      <div ng-repeat="flag in flagData" class="flag-cell" id="flag-{{flag.id}}"
+      ng-click="toggleSelected('{{flag.id}}')" ng-class="isSelected('{{flag.id}}')">
+      <svg width="40px" height="30px">
+        <use width="40px" height="30px" ng-href="#flag-{{flag.id}}" xlink:href="#flag-ad" />
+      </svg>
+      {{flag.id}}
+    </div>
+  </div>
+  <hr/>
+  Code to paste:
+  <div class="innerHovery code">
+    <span ng-if="selectedFlags.length">
+      <code>
+        &lt;div style="display:none"&gt;
+        &lt;svg xmlns="http://www.w3.org/2000/svg"&gt;
+      </code>
+      <code ng-repeat="co in flagStr()">{{co}}</code>
+      <code>
+        &lt;/svg&gt;
+        &lt;/div&gt;
+      </code>
+    </span>
+    <code ng-hide="selectedFlags.length">Select flags...</code>
+  </div>
+  Flags:
+  <div class="innerHovery" style="display: flex; flex-direction: row;">
+    <svg style="margin-right: 5px;" width="40px" height="30px" ng-repeat="flagId in selectedFlags">
+      <use width="40px" height="30px" ng-href="#flag-{{flagId}}" xlink:href="#flag-ad" />
+    </svg>
+  </div>
 </div>
+
+<div class="hovery">
+  <h1>How to use:</h1>
+  <hr/>
+
+  <div class="innerHovery" style="line-height: 1.5;">
+   <p>
+     Select the flags you want and then paste the code from above after opening the <code>&lt;head&gt;</code> tag of your html5 page.
+     Then you can use the flags by referencing their id: <code>&lt;svg width="40px" height="30px"&gt;
+     &lt;use width="40px" height="30px" xlink:href="#flag-id" /&gt;
+     &lt;/svg&gt;</code>
+     <svg width="40px" height="30px">
+       <use width="40px" height="30px" xlink:href="#flag-de" />
+     </svg>
+   </p>
+   <p>
+     So to use, for example the German flag with width 80, we can use the following code:
+     <code>&lt;svg width="80px" height="60px"&gt;
+       &lt;use width="80px" height="60px" xlink:href="#flag-de" /&gt;
+       &lt;/svg&gt;</code>
+       <svg width="80px" height="60px">
+         <use width="80px" height="60px" xlink:href="#flag-de" />
+       </svg>
+     </p>
+   </div>
+ </div>

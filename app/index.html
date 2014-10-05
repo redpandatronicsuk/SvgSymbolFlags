@@ -1,26 +1,34 @@
 <!doctype html>
 <html class="no-js">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
-  </head>
-  <body ng-app="svgSymbolFlagsApp">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+</head>
+<body ng-app="svgSymbolFlagsApp">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+      <![endif]-->
+      <div style="display:none">
+        <svg xmlns="http://www.w3.org/2000/svg">
+          <symbol viewBox="0 0 4 3" id="flag-ad"><title>ad</title> <rect height="3" width="1.333" y="0" x="0" fill="#0000bd"/> <rect height="3" width="1.333" y="0" x="1.333" fill="#fff600"/> <rect height="3" width="1.333" y="0" x="2.666" fill="#cc1900"/> </symbol>
+          <symbol viewBox="0 0 4 3" id="flag-de"><title>de</title> <rect height="1" width="4" y="0"/> <rect height="1" width="4" y="1" fill="#f00"/> <rect height="1" width="4" y="2" fill="#ffe600"/> </symbol>
+          <symbol viewBox="0 0 4 3" id="flag-gb"><title>gb</title> <clippath id="svgstoref9ed9468b8dd37adfef94afe1035541ct"> <path d="M3,1.5 h3 v1.5 z v1.5 h-3 z h-3 v-1.5 z v-1.5 h3 z"/> </clippath> <path d="M0,0 v3 h4 v-3 z" fill="#00247d"/> <path d="M0,0 L4,3 M4,0 L0,3" stroke="#fff" stroke-width=".6"/> <path d="M0,0 L4,3 M4,0 L0,3" stroke="#cf142b" stroke-width=".4"/> <path d="M2,0 v3 M0,1.5 h4" stroke="#fff" stroke-width="1"/> <path d="M2,0 v3 M0,1.5 h4" stroke="#cf142b" stroke-width=".6"/> </symbol>
+          <symbol viewBox="0 0 4 3" id="flag-jp"><title>jp</title> <rect fill="#fff" height="3" width="4"/> <circle fill="#bc002d" cx="2" cy="1.5" r="1"/> </symbol></svg>
+        </div>
 
-    <!-- Add your site or application content here -->
-    <div class="container">
+        <!-- Add your site or application content here -->
+        <div class="container">
+    <!--
       <div class="header">
         <ul class="nav nav-pills pull-right">
           <li class="active"><a ng-href="#">Home</a></li>
@@ -29,27 +37,28 @@
         </ul>
         <h3 class="text-muted">svgSymbolFlags</h3>
       </div>
+    -->
 
-      <div ng-view=""></div>
+    <div ng-view=""></div>
 
-      <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
+    <div class="footer">
+      <p><span class="glyphicon glyphicon-heart"></span> from RedPandaTronics</p>
     </div>
+  </div>
 
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+  <script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
-    </script>
+   ga('create', 'UA-XXXXX-X');
+   ga('send', 'pageview');
+ </script>
 
-    <!-- build:js(.) scripts/oldieshim.js -->
+ <!-- build:js(.) scripts/oldieshim.js -->
     <!--[if lt IE 9]>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.js"></script>
@@ -81,10 +90,11 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
-        <!-- endbuild -->
-</body>
-</html>
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/blur.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/about.js"></script>
+    <!-- endbuild -->
+  </body>
+  </html>

@@ -40,7 +40,8 @@ body {
 /* Custom page footer */
 .footer {
   padding-top: 19px;
-  color: #777;
+  color: #FFF;
+  text-shadow: 1px 1px 1px black;
   border-top: 1px solid #e5e5e5;
 }
 
@@ -89,4 +90,82 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+
+/* My Stuff */
+body {
+  background-image:url('../images/backgroundflags.png');
+  background-position:top left;
+  background-repeat:repeat;
+  background-attachment:fixed;
+  font-size: 18pt;
+  }
+
+  .rptLogoRound {
+    border-radius: 25%;
+  }
+
+  .hovery {
+    padding: 10px;
+    text-shadow: 0px 1px 0px #FFF;
+    border-radius: 10px;
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3), 0px -1px 0px rgba(255, 255, 255, 0.8), 0px 4px 10px rgba(0, 0, 0, 0.6);
+    background: rgba(255,255,255,0.1);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .innerHovery {
+    position: relative;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4), 0px 2px 5px rgba(0, 0, 0, 0.4) inset, 0px 1px 0px #FFF;
+    overflow-x: scroll;
+    line-height: 1;
+  }
+
+  .innerHovery code {
+    color: black;
+    font-size: 10pt;
+  }
+
+  .flag-grid {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-around;
+  }
+
+.flag-cell {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  line-height: 1;
+  background: rgba(grey, 0.75);
+  padding: 5px;
+}
+
+// .flag-cell svg {
+//   border: 1px solid black;
+//   box-sizing: border-box;
+// }
+
+// .flag-cell:hover svg {
+//   border: 0;
+//   box-sizing: border-box;
+// }
+
+.flag-cell:hover {
+  background: rgba(#FF7E00, 0.75);
+}
+
+.flaf-cell-selected {
+  background: rgba(green, 0.75);
+}
+
+.flaf-cell-selected:hover {
+  background: rgba(lightgreen, 0.75);
 }
