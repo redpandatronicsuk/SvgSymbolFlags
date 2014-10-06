@@ -100,44 +100,51 @@ body {
   background-repeat:repeat;
   background-attachment:fixed;
   font-size: 18pt;
-  }
+}
 
-  .rptLogoRound {
-    border-radius: 25%;
-  }
+.rptLogoRound {
+  border-radius: 25%;
+}
 
-  .hovery {
-    padding: 10px;
-    text-shadow: 0px 1px 0px #FFF;
-    border-radius: 10px;
-    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3), 0px -1px 0px rgba(255, 255, 255, 0.8), 0px 4px 10px rgba(0, 0, 0, 0.6);
-    background: rgba(255,255,255,0.1);
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 15px;
-    text-align: center;
-  }
+.hovery {
+  padding: 10px;
+  text-shadow: 0px 1px 0px #FFF;
+  border-radius: 10px;
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3), 0px -1px 0px rgba(255, 255, 255, 0.8), 0px 4px 10px rgba(0, 0, 0, 0.6);
+  background: rgba(255,255,255,0.1);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  text-align: center;
+}
 
-  .innerHovery {
-    position: relative;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.25);
-    box-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4), 0px 2px 5px rgba(0, 0, 0, 0.4) inset, 0px 1px 0px #FFF;
-    overflow-x: scroll;
-    line-height: 1;
-  }
+.innerHovery {
+  position: relative;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4), 0px 2px 5px rgba(0, 0, 0, 0.4) inset, 0px 1px 0px #FFF;
+  overflow-x: scroll;
+  line-height: 1;
+}
 
-  .innerHovery code {
-    color: black;
-    font-size: 10pt;
-  }
+.innerHovery code {
+  color: black;
+  font-size: 10pt;
+}
 
-  .flag-grid {
-    display: flex;
-    flex-direction: row; 
-    justify-content: space-around;
-  }
+.downloadHtml a {
+  cursor: pointer;
+  font-size: 250%;
+  text-transform: uppercase;
+}
+
+.flag-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
 
 .flag-cell {
   display: flex;

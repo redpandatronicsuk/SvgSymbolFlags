@@ -37,11 +37,14 @@
     </span>
     <code ng-hide="selectedFlags.length">Select flags...</code>
   </div>
-  Flags:
+  <span ng-show="selectedFlags.length">Flags:</span>
   <div class="innerHovery" style="display: flex; flex-direction: row;">
     <svg style="margin-right: 5px;" width="40px" height="30px" ng-repeat="flagId in selectedFlags">
       <use width="40px" height="30px" ng-href="#flag-{{flagId}}" xlink:href="#flag-ad" />
     </svg>
+  </div>
+  <div class="downloadHtml" ng-show="selectedFlags.length">
+    <a ng-click="makeBlob()">download</a> 
   </div>
 </div>
 
@@ -51,22 +54,47 @@
 
   <div class="innerHovery" style="line-height: 1.5;">
    <p>
-     Select the flags you want and then paste the code from above after opening the <code>&lt;head&gt;</code> tag of your html5 page.
-     Then you can use the flags by referencing their id: <code>&lt;svg width="40px" height="30px"&gt;
-     &lt;use width="40px" height="30px" xlink:href="#flag-id" /&gt;
-     &lt;/svg&gt;</code>
-     <svg width="40px" height="30px">
-       <use width="40px" height="30px" xlink:href="#flag-de" />
-     </svg>
-   </p>
-   <p>
-     So to use, for example the German flag with width 80, we can use the following code:
-     <code>&lt;svg width="80px" height="60px"&gt;
-       &lt;use width="80px" height="60px" xlink:href="#flag-de" /&gt;
-       &lt;/svg&gt;</code>
-       <svg width="80px" height="60px">
-         <use width="80px" height="60px" xlink:href="#flag-de" />
-       </svg>
-     </p>
-   </div>
- </div>
+    Select the flags you want and then paste the code from above after opening the 
+    <code>
+      &lt;head&gt;
+    </code> tag of your html5 page.
+    Then you can use the flags by referencing their id: 
+    <code>
+      &lt;svg width="40px" height="30px"&gt;
+      &lt;use width="40px" height="30px" xlink:href="#flag-id" /&gt;
+      &lt;/svg&gt;
+    </code>
+    <svg width="40px" height="30px">
+     <use width="40px" height="30px" xlink:href="#flag-de" />
+   </svg>
+ </p>
+ <p>
+   So to use, for example the German flag with width 80, we can use the following code:
+   <code>&lt;svg width="80px" height="60px"&gt;
+     &lt;use width="80px" height="60px" xlink:href="#flag-de" /&gt;
+     &lt;/svg&gt;
+   </code>
+   <svg width="80px" height="60px">
+     <use width="80px" height="60px" xlink:href="#flag-de" />
+   </svg>
+ </p>
+ <hr/>
+ <h2>Alternatively:</h2>
+ <hr/>
+ <p>
+  Once you have selected all the flags you want to include, hit the download button and check out
+  the source code of the generated HTML file. NOTE: You might have to save the file to your
+  computer first (File -> Save page as..., Cmnd/Ctrl + s, or wahtever) and re-open it, before
+  the flags show up in your browser.
+</p>
+</div>
+
+<div class="hovery">
+  <h1>How to contribute:</h1>
+  <hr/>
+  <div class="innerHovery">
+  The aim of this project is to provide SVG flag symbols in their smallest size possible. This means that flags should be with the fewest SVG tags, parameters and parameter values as possible. All flags should have 4:3 aspect ratio and some symbols on the flag can be sacrificed in favour of smaller code size. If you have any SVG flags you would like to contribute, please see email us at: <a href="mailto:info@redpandatronics.com?Subject=New SVG Flag!" target="_top">
+    info@redpandatronics.com</a> or see further instructions on the <a href="https://github.com/redpandatronicsuk/SvgSymbolFlags">github repository</a>.
+  </div>
+</div>
+</div>
